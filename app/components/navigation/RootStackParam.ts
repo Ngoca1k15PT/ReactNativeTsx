@@ -1,13 +1,11 @@
 import React from 'react';
 
 type RootStackParamList = {
-  Home: {
-    id: string;
+  TabBarNavigation: undefined;
+  Home: undefined;
+  Exchange: {
+    id?: string | undefined;
   };
-  Detail: {
-    productId: number;
-  };
-  Exchange: undefined;
   Setting: {userID: String};
 };
 

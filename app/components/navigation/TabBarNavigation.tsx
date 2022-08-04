@@ -1,15 +1,22 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Exchange from '../exchange/Exchange';
 import Setting from '../setting/Setting';
 import Home from '../home/Home';
 import RootStackParamList from './RootStackParam';
 
-const RootStack = createStackNavigator<RootStackParamList>();
+const RootStack = createBottomTabNavigator<RootStackParamList>();
 
-<RootStack.Navigator initialRouteName={'Home'}>
-  <RootStack.Screen name={'Home'} component={Home} />
-  <RootStack.Screen name={'Exchange'} component={Exchange} />
-  <RootStack.Screen name={'Setting'} component={Setting} />
-</RootStack.Navigator>;
+const TabBarCustom = () => {};
+
+const TabBarNavigation = () => {
+  return (
+    <RootStack.Navigator screenOptions={{headerShown: false}}>
+      <RootStack.Screen name={'Home'} component={Home} />
+      <RootStack.Screen name={'Exchange'} component={Exchange} />
+      <RootStack.Screen name={'Setting'} component={Setting} />
+    </RootStack.Navigator>
+  );
+};
+
+export default TabBarNavigation;
