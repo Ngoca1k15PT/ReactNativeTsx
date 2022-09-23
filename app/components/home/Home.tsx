@@ -15,7 +15,7 @@ const Home = ({navigation}: ProfileScreenNavigationProp) => {
   return (
     <SafeAreaView>
       <View style={{flex: 1}}>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={{
             height: 60,
             width: 200,
@@ -24,7 +24,7 @@ const Home = ({navigation}: ProfileScreenNavigationProp) => {
           }}
           onPress={() => navigation.navigate('Exchange', {id: 'aa'})}>
           <Text>go</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </SafeAreaView>
   );
