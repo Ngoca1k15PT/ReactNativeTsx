@@ -3,9 +3,13 @@ import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import {StackActions, useNavigation} from '@react-navigation/native';
 import type {CompositeScreenProps} from '@react-navigation/native';
 import type {DrawerScreenProps} from '@react-navigation/drawer';
-import type {StackScreenProps} from '@react-navigation/stack';
+import type {
+  StackScreenProps,
+  StackNavigationProp,
+} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 import RootStackParamList from '../navigation/RootStackParam';
+
 type ProfileScreenNavigationProp = CompositeScreenProps<
   DrawerScreenProps<RootStackParamList>,
   StackScreenProps<RootStackParamList>
@@ -26,7 +30,8 @@ const Header: React.FC<Props> = ({
   menuShown = false,
   isPopToTop = false,
 }) => {
-  const navigation = useNavigation<ProfileScreenNavigationProp>();
+  // const navigation = useNavigation<ProfileScreenNavigationProp>();
+  const navigation = useNavigation<StackNavigationProp<any>>();
   return (
     <View style={styles.container}>
       <View style={styles.body}>

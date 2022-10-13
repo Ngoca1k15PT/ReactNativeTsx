@@ -7,13 +7,27 @@ import {
   Platform,
   StyleSheet,
 } from 'react-native';
-import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
+import {
+  DrawerContentScrollView,
+  DrawerItem,
+  DrawerScreenProps,
+} from '@react-navigation/drawer';
 import {
   DrawerActions,
   StackActions,
   useNavigation,
 } from '@react-navigation/native';
+import type {CompositeScreenProps} from '@react-navigation/native';
+import type {
+  StackScreenProps,
+  StackNavigationProp,
+} from '@react-navigation/stack';
 import RootStackParamList from '../navigation/RootStackParam';
+
+type ProfileScreenNavigationProp = CompositeScreenProps<
+  DrawerScreenProps<RootStackParamList>,
+  StackScreenProps<RootStackParamList>
+>;
 
 const menuOptions = [
   {
@@ -33,17 +47,17 @@ const menuOptions = [
 ];
 
 const DrawerContent = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<any>>();
 
   const onTapMenuOption = (value, index) => {
     switch (index) {
       case 4:
         // AppManager.shared.currentUser = null
         //             StorageManager.setData(Constant.keys.currentUser, null)
-        // navigation.reset({
-        //   index: 0,
-        //   routes: [{name: 'Login'}],
-        // });
+        navigation.reset({
+          index: 0,
+          routes: [{name: 'Login'}],
+        });
         break;
       case 0:
         navigation.dispatch(DrawerActions.closeDrawer());

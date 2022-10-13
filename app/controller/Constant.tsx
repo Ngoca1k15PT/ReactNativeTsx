@@ -1,17 +1,19 @@
-import {Directions} from 'react-native';
+// import {Directions} from 'react-native';
 
 const Constant = {
-  screen: {
-    width: Directions.get('window').width,
-    height: Directions.get('window').height,
-  },
+  // screen: {
+  //   width: Directions.get('window').width,
+  //   height: Directions.get('window').height,
+  // },
   screenName: {
     Home: 'Home',
     Exchange: 'Exchange',
     Setting: 'Setting',
   },
   key: {},
-  icon: {},
+  icon: {
+    login: require('../assets/images/auth/img_login.png'),
+  },
   fonts: {},
   cardType: {
     mastercard: 'mastercard',
