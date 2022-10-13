@@ -14,7 +14,14 @@ const Constant = {
   icon: {
     login: require('../assets/images/auth/img_login.png'),
   },
-  fonts: {},
+  fonts: {
+    poppinsBold: 'Poppins-Bold',
+    poppinsMedium: 'Poppins-Medium',
+    poppinsRegular: 'Poppins-Regular',
+    poppinsThin: 'Poppins-Thin',
+    poppinsLight: 'Poppins-Light',
+    poppinsSemiBold: 'Poppins-SemiBold',
+  },
   cardType: {
     mastercard: 'mastercard',
     visa: 'visa',
@@ -25,7 +32,9 @@ const Constant = {
     unionpay: 'unionpay',
     diners: 'diners',
   },
-  color: {},
+  color: {
+    primary: '#923CFF',
+  },
 };
 
 export default Constant;
