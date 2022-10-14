@@ -51,7 +51,7 @@ const DrawerContent = () => {
 
   const onTapMenuOption = (value, index) => {
     switch (index) {
-      case 4:
+      case 3:
         // AppManager.shared.currentUser = null
         //             StorageManager.setData(Constant.keys.currentUser, null)
         navigation.reset({

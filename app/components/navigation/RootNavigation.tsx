@@ -17,7 +17,7 @@ const RootNavigation = () => {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{headerShown: false}}
-          initialRouteName={'Login'}>
+          initialRouteName={'DrawerNavigator'}>
           <Stack.Screen name={'DrawerNavigator'} component={DrawerNavigator} />
           {/* <Stack.Screen
             name={'TabBarNavigation'}
